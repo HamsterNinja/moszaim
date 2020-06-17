@@ -1,7 +1,170 @@
 {% include "partials/header.twig" %}
 <main class='main-content' id="app">
+<div class="container">
+	<div class="main-slick">
+		{% for item in 0..3 %}
+		<div class="main-slick-content">
+			<a href="">
+				<img src="./assets/images/slide.jpg" alt="">
+			</a>
+		</div>
+		{% endfor %}
+	</div>
+	<div class="main-page-triggers">
+		<div class="trigger-item">
+			<div class="trigger-info">
+				<div class="trigger-name _white">Низкая процентная ставка</div>
+				<div class="trigger-value _white">от 3%</div>	
+			</div>
+			<div class="trigger-img"><img src="./assets/images/trigger-1.svg" alt=""></div>
+		</div>
+		<div class="trigger-item">
+			<div class="trigger-info">
+				<div class="trigger-name _white">Мы ценим Ваше время. Оформление в течение</div>
+				<div class="trigger-value _white">30 минут</div>	
+			</div>
+			<div class="trigger-img"><img src="./assets/images/trigger-2.svg" alt=""></div>
+		</div>
+		<div class="trigger-item">
+			<div class="trigger-info">
+				<div class="trigger-text">Большая сумма займа</div>
+				<div class="trigger-value">90%</div>
+				<div class="trigger-text">от суммы займа</div>
+			</div>
+			<div class="trigger-img"><img src="./assets/images/trigger-3.svg" alt=""></div>
+		</div>
+		<div class="trigger-item">
+			<div class="trigger-info">
+				<div class="trigger-name">Выдаем займы под электронный</div>
+				<div class="trigger-value">ПТС</div>	
+			</div>
+			<div class="trigger-img"><img src="./assets/images/trigger-4.svg" alt=""></div>
+		</div>
+		<div class="trigger-item">
+			<div class="trigger-info">
+				<div class="trigger-title">Понижаем процентную ставку</div>
+				<div class="trigger-text">при повторном обращении в нашу компанию!</div>	
+			</div>
+			<div class="trigger-img"><img src="./assets/images/trigger-5.svg" alt=""></div>
+		</div>
+		<div class="trigger-item">
+			<div class="trigger-info">
+				<div class="trigger-title _blue">Минимальный</div>
+				<div class="trigger-text">пакет документов (Паспорт, ПТС, СТС)</div>	
+			</div>
+			<div class="trigger-img"><img src="./assets/images/trigger-6.svg" alt=""></div>
+		</div>
+	</div>
+<div id="calculator" class="calc-wrapper main-page__calculator calculator">
+    <div class="calculator__container">
+        <div class="calculator__content">
 
-
-
+                        <h2 class="calculator__title">Рассчитать займ</h2>
+            
+            <p class="calculator__desc">Рассчитайте ежемесячный платеж и сумму к выплате</p>
+            <form id="form-calculator" name="summ" action="#" method="POST" class="calculator__form form-calculator">
+                <label class="form-calculator__label"><span>Сумма кредита, ₽</span>
+                    <input id="calc_sum" type="text" value="300 000 ₽" name="calc_sum" class="form-calculator__input form-calculator__input--summ-loan" placeholder="">
+                    <div id="calc_sum_range" class="calc-range clc-r"></div>
+                    <p class="form-calculator__price under-input-wrapper"><span class="form-calculator__from">от 30 000</span><span class="form-calculator__to under-input-2">до 15 000 000</span></p>
+                </label>
+                <label class="form-calculator__label"><span>Срок кредита(мес)</span>
+                    <input id="calc_term" type="text" name="calc_term" value="12 месяц" placeholder="" class="form-calculator__input form-calculator__input--summ-loan">
+                    <input id="calc_term_range" type="range" min="0" max="36" step="1" value="12" name="calc_term_range" class="calc-range" placeholder="">
+                    <p class="form-calculator__price under-input-wrapper"><span class="form-calculator__from">1</span><span class="form-calculator__to under-input-2">60</span></p>
+                </label>
+                <label class="form-calculator__label"><span>Ежемесячный платеж</span>
+                    <input id="calc_payment" type="text" name="calc_payment" value="264 355 ₽" class="form-calculator__input form-calculator__input--summ-loan" placeholder="">
+                    <input id="calc_payment_range" type="range" min="NaN" max="1167382" step="1" value="20697" name="calc_payment_range" class="calc-range clc-r" placeholder="">
+                </label>
+                <div class="form-calculator__output form-output">
+            <div class="form-output__content">
+                <div class="form-output__summ-percent summ-percent"><span class="summ-percent__desc" style="top: 0px; left: 0px;">Сумма процентов</span>
+                    <input id="calc_overpayment" type="text" name="calc_overpayment" readonly="" class="summ-percent__output" placeholder="">
+                    <p class="form-output__rate summ-rate">
+		                <input id="calc_rate_range" type="hidden" value="2" name="calc_rate_range" class="calc-range" placeholder=""><span class="summ-rate__desc" style="top: 0px; left: 0px;">Ваша ставка:</span><span class="summ-rate__output form-stv" style="top: 0px; left: 0px;">2</span><span style="top: 0px; left: 0px;">% в месяц</span>
+		            </p>
+                </div>
+                <div class="form-output__summ-result summ-result"><span class="summ-result__desc" style="top: 0px; left: 0px;">Сумма к выплате</span>
+                    <input id="calc_payments_sum" type="text" name="calc_payments_sum" readonly="" class="summ-result__output" placeholder="">
+                    <a class="form-output__approval">Оставить заявку</a>
+                </div>
+            </div>
+            
+            
+        </div>
+            </form>
+            <div style="display: none;" class="calc-group">
+                <div class="col-sm-6">
+                    <label for="calc_payment_type">Вид платежа:</label>
+                </div>
+                <div class="col-sm-6">
+                    <select id="calc_payment_type" name="calc_payment_type" class="calc-value">
+                        <option value="1" selected="">аннуитетный</option>
+                    </select>
+                </div>
+            </div>
+        
+        
+        </div>
+    </div>
+	<div class="manager-callback">
+		<div class="manager-callback-title">Свяжитесь с нашим менеджером</div>
+		<a href="" class="manager-callback-link">Получить одобрение</a>
+	</div>
+</div>
+<div class="main-page_how-work">
+	<div class="form-summ-content">
+		<div class="form-summ-title">Какую сумму вы бы хотели получить?</div>
+		<form action="">
+			<input class="form-summ-input" type="text" placeholder="1 000 000 ₽">
+			<input class="form-summ-submit" type="submit" value="Получить">
+		</form>
+	</div>
+	<div class="how-work-content">
+		<div class="how-work-content-title">Как мы работаем</div>
+		<div class="how-work-content-text">
+			<p>
+				<span class="company">Мос</span><span class="company _blue">Займ</span><span class="company">24</span>
+				- это группа микрофинансовых организаций. Мы выдаём займы от 100 тысяч рублей до нескольких миллионов в ситуациях, когда деньги нужны «уже вчера».
+Обычно к нам обращаются предприниматели или частные лица, которым нужны деньги быстро и без лишних сложностей. Например, чтобы покрывать кассовые разрывы, держать под рукой «оборотку» или срочно оплачивать счета.
+			</p>
+		</div>
+	</div>
+</div>
+<div class="news-block">
+	<div class="news-block-content">
+		<div class="news-block-header">
+			<div class="news-block-title">Новости</div>
+			<div class="all-news-link"><a href="">Все новости</a></div>
+		</div>
+		<div class="news-block-inner">
+			{% for item in 0..2 %}
+			<a href="" class="news-item">
+				<div class="news-item-date">20.05.2020</div>
+				<div class="news-item-name">Мутко: Россияне подали больше 120 тысяч заявок в банки на оформление льготной ипотеки</div>
+			</a>
+			{% endfor %}
+		</div>
+	</div>
+	<div class="news-block-slider">
+		<div class="news-block-slick">
+			{% for item in 0..3 %}
+			<div class="news-block-slick-content">
+				<img src="./assets/images/news-block.jpg" alt="">
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+<div class="main-page-seo">
+	<div class="main-page-seo-title">Заём денег в долг в <span class="company-name">Мос</span><span class="company-name _blue">Займ</span><span class="company-name">24</span></div>
+	<div class="main-page-seo-text">
+		<p>МосЗайм24 — способ решить финансовые проблемы, предъявив только паспорт. Это отличный выход из сложной ситуации, если вам срочно требуются деньги для совершения крупной покупки, проведения праздника, отдыха с семьей или не хватает средств на повседневные расходы до зарплаты. Но далеко не всегда у друзей или родственников есть необходимая сумма, а получение кредита требует сил и времени. Компания «Быстроденьги» занимает лидирующие позиции на микрофинансовом рынке России. С 2008 года мы помогаем в решении финансовых проблем, предлагая занять деньги срочно как в филиалах, так и с помощью онлайн-сервисов.</p>
+		<p>МосЗайм24 — способ решить финансовые проблемы, предъявив только паспорт. Это отличный выход из сложной ситуации, если вам срочно требуются деньги для совершения крупной покупки, проведения праздника, отдыха с семьей или не хватает средств на повседневные расходы до зарплаты. Но далеко не всегда у друзей или родственников есть необходимая сумма, а получение кредита требует сил и времени. Компания «Быстроденьги» занимает лидирующие позиции на микрофинансовом рынке России. С 2008 года мы помогаем в решении финансовых проблем, предлагая занять деньги срочно как в филиалах, так и с помощью онлайн-сервисов.</p>
+	</div>
+	<div class="show-more">Узнать больше</div>
+</div>
+</div>
 </main>
 {% include "partials/footer.twig" %}

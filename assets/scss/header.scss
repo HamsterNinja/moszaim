@@ -1,0 +1,85 @@
+.main-header{
+	margin-bottom: 25px;
+}
+.main-header-top {
+    padding: 15px 0;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.user-city {
+    background-image: url(../images/marker.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 15px;
+}
+.choice-city-text{
+	font-size: 14px;
+	line-height: 17px;
+	color: #C4C4C4;
+}
+.choice-city-button{
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 17px;
+	color: #000000;
+}
+.main-header-logo {
+    position: absolute;
+    left: calc(50% - 100px);
+}
+.main-header-info{}
+.main-header-phone{}
+.main-header-phone a{
+	font-weight: 600;
+font-size: 18px;
+line-height: 22px;
+color: #000000;
+text-decoration: none;
+}
+.main-header-callback{}
+.main-header-callback a{
+	font-weight: 500;
+font-size: 15px;
+line-height: 18px;
+text-decoration: none;
+color: #F5842B;
+}
+.main-header-bottom{
+	border: 1px solid #ECECEC;
+	border-radius: 3px;
+	padding: 15px 25px 15px 34px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.main-header-menu{}
+.main-header-menu ul{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.main-header-menu ul li{
+	margin-right: 30px;
+}
+.main-header-menu ul li a{
+font-weight: 500;
+font-size: 15px;
+line-height: 18px;
+text-decoration: none;
+color: #000000;
+}
+.main-header-calculation{
+	font-weight: bold;
+font-size: 15px;
+line-height: 18px;
+text-decoration: none;
+color: #00AEEF;
+}
