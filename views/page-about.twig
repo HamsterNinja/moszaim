@@ -1,0 +1,66 @@
+{% include "partials/header.twig" %}
+<main class='main-content' id="app">
+<div class="container">
+	<div class="about-us-header">
+		<div class="about-us-left">
+			<img src="./assets/images/about.jpg" alt="">
+		</div>
+		<div class="about-us-right">
+			<h1 class="about-us-right-title">MosZaim24 работает для вас!</h1>
+			<div class="about-us-right-text">
+				Уважаемые клиенты! Информируем вас, что в связи со сложившейся эпидемиологической ситуацией сроки рассмотрения обращений могут быть увеличены. Если для рассмотрения вашего вопроса требуется предоставить подтверждающие документы, пожалуйста, направляйте их нам на электронный адрес moszaim24@info.ru. Благодарим за понимание! 
+				Здоровья вам и вашим близким.
+			</div>
+		</div>
+	</div>
+	<div class="company-history">
+		<h2 class="company-title">История <span class="company">Mos</span><span class="company _blue">Zaim</span><span class="company">24</span></h2>
+		<p>Разнообразный и богатый опыт говорит нам, что постоянное информационно-пропагандистское обеспечение нашей деятельности способствует повышению качества стандартных подходов. Не следует, однако, забывать, что дальнейшее развитие различных форм деятельности прекрасно подходит для реализации новых предложений. Являясь всего лишь частью общей картины, представители современных социальных резервов преданы.</p>
+		<p>Также как убеждённость некоторых оппонентов предполагает независимые способы реализации модели развития. Предварительные выводы неутешительны: начало повседневной работы по формированию позиции предопределяет высокую востребованность системы обучения кадров, соответствующей насущным потребностям. С другой стороны, постоянный количественный рост и сфера нашей активности говорит о возможностях.</p>
+	</div>
+	<div class="company-differences">
+		<h2 class="company-title">Чем <span class="company">Mos</span><span class="company _blue">Zaim</span><span class="company">24</span> отличается от банков?</h2>
+		<div class="diff-triggers">
+			<div class="diff-trigger">
+				<div class="diff-trigger-img"><img src="./assets/images/diff-1.svg" alt=""></div>
+				<div class="diff-trigger-text"><span>Отсутствие проверок</span> вашей платежеспособности.</div>
+			</div>
+			<div class="diff-trigger">
+				<div class="diff-trigger-img"><img src="./assets/images/diff-2.svg" alt=""></div>
+				<div class="diff-trigger-text">Досрочное погашение в любой день <span>без штрафов</span>.</div>
+			</div>
+			<div class="diff-trigger">
+				<div class="diff-trigger-img"><img src="./assets/images/diff-3.svg" alt=""></div>
+				<div class="diff-trigger-text"><span>Минимальный</span> пакет документов (Паспорт, ПТС, СТС).</div>
+			</div>
+			<div class="diff-trigger">
+				<div class="diff-trigger-img"><img src="./assets/images/diff-4.svg" alt=""></div>
+				<div class="diff-trigger-text">Оформление в течение <span>30 минут.</span></div>
+			</div>
+			<div class="diff-trigger">
+				<div class="diff-trigger-img"><img src="./assets/images/diff-5.svg" alt=""></div>
+				<div class="diff-trigger-text">Возможность <span>продления договора</span> на удобных для клиента условиях.</div>
+			</div>
+			<div class="diff-trigger">
+				<div class="diff-trigger-img"><img src="./assets/images/diff-6.svg" alt=""></div>
+				<div class="diff-trigger-text">Защищаем <span>конфиденциальность</span> сделки.</div>
+			</div>
+		</div>
+	</div>
+	<div class="documents-block">
+		<div class="documents-block-title">Документы</div>
+		<div class="documents-block-content">
+			{% for item in 0..7 %}
+				<a href="" class="document-link">
+					<div class="document-img"><img src="./assets/images/doc.svg" alt=""></div>
+					<div class="document-info">
+						<div class="document-name">Правила предоставления потребительских займов</div>
+						<div class="document-size">467 КБ</div>
+					</div>
+				</a>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+</main>
+{% include "partials/footer.twig" %}

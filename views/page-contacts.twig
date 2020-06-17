@@ -1,0 +1,64 @@
+{% include "partials/header.twig" %}
+<main class='main-content' id="app">
+<div class="container">
+	<div class="contacts-info">
+		<h1 class="contacts-info-title">Контакты</h1>
+		<div class="contacts-info-content">
+			<div class="contacts-info-item">
+				<div class="contacts-info-item-head">По телефону <img src="./assets/images/phone-c.svg" alt=""></div>
+				<div class="contacts-info-item-inner">
+					<div class="contacts-info-item-name">Обратный звонок</div>
+					<div class="contacts-info-item-value"><a href="">8 800 000-00-00</a></div>
+					<div class="contacts-info-item-link"><a href="">Заказать обратный звонок</a></div>
+				</div>
+			</div>
+			<div class="contacts-info-item">
+				<div class="contacts-info-item-head">Онлайн <img src="./assets/images/chat.svg" alt=""></div>
+				<div class="contacts-info-item-inner">
+					<div class="contacts-info-item-name">На сайте</div>
+					<div class="contacts-info-item-value">Онлайн-чат</div>
+					<div class="contacts-info-item-link"><a href="">Открыть чат</a></div>
+				</div>
+			</div>
+			<div class="contacts-info-item">
+				<div class="contacts-info-item-head">По почте <img src="./assets/images/pochta.svg" alt=""></div>
+				<div class="contacts-info-item-inner">
+					<div class="contacts-info-item-name">Почтовый индекс</div>
+					<div class="contacts-info-item-value">156943, г. Москва, ул. Московская, с.4</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="contacts-callback">
+		<div class="contacts-callback-left">
+			<div class="contacts-callback-left-title">Мы всегда на связи!</div>
+			<div class="contacts-callback-left-text">Уважаемые клиенты! Информируем вас, что в связи со сложившейся эпидемиологической ситуацией сроки рассмотрения обращений могут быть увеличены. Если для рассмотрения вашего вопроса требуется предоставить подтверждающие документы, пожалуйста, направляйте их нам на электронный адрес moszaim@info.ru. Благодарим за понимание! Здоровья вам и вашим близким.</div>
+		</div>
+		<div class="contacts-callback-right">
+			<div class="contacts-callback-right-title">Оставить сообщение</div>
+			<form action="">
+				<input class="contacts-form-input" type="text" placeholder="Как вас зовут?">
+				<input class="contacts-form-input" type="text" placeholder="E-mail">
+				<input class="contacts-form-input" type="text" placeholder="Телефон">
+				<select class="contacts-form-select" name="" id="">
+					<option disabled value="">Вопрос</option>
+					<option value="">Вопрос</option>
+					<option value="">Вопрос</option>
+					<option value="">Вопрос</option>
+				</select>
+				<textarea class="contacts-form-textarea" name="" placeholder="Сообщение"></textarea>
+				<div class="contacts-form-bottom">
+					<label class="control control-checkbox">
+				        	Я согласен на обработку <a href="">персональных данных</a>
+				            <input type="checkbox" checked="checked" />
+				        <div class="control_indicator"></div>
+				    </label>
+					<input class="contacts-form-submit" type="submit" value="Оставить заявку">
+
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+</main>
+{% include "partials/footer.twig" %}

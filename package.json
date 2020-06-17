@@ -1,0 +1,41 @@
+{
+  "name": "start-template",
+  "author": "Eroshkin A",
+  "version": "3.1.0",
+  "description": "start template",
+  "scripts": {
+    "dev": "gulp"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "",
+    "@babel/preset-env": "",
+    "@babel/register": "",
+    "browser-sync": "",
+    "css-loader": "",
+    "gulp": "",
+    "gulp-autoprefixer": "",
+    "gulp-data": "",
+    "gulp-notify": "",
+    "gulp-rename": "",
+    "gulp-sass": "",
+    "gulp-twig": "",
+    "sass-loader": "",
+    "vue": "",
+    "vue-hot-reload-api": "",
+    "vue-html-loader": "",
+    "vue-loader": "",
+    "vue-style-loader": "",
+    "vue-template-compiler": "",
+    "webpack": "",
+    "webpack-dev-middleware": "",
+    "webpack-hot-middleware": "",
+    "write-file-webpack-plugin": ""
+  },
+  "main": "index.js",
+  "keywords": [],
+  "dependencies": {
+    "babel-loader": "^8.1.0",
+    "babel-preset-latest": "^6.24.1"
+  }
+}

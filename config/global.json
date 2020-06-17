@@ -1,0 +1,9 @@
+{
+  "title": "Главная",
+  "site": {
+    "link": "home.html",
+    "theme": {
+      "link": ""
+    }
+  }
+}

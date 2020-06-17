@@ -1,0 +1,124 @@
+{% include "partials/header.twig" %}
+<main class='main-content' id="app">
+<div class="container">
+	<div class="page-services-header">
+		<div class="page-services-header-left">
+			<h1 class="page-services-header-name">Займ под залог ПТС</h1>
+			<div class="page-services-header-left-info">
+				<ul>
+					<li>Низкая процентная ставка (от 3 %).</li>
+					<li>Большая сумма займа (до 90 % от оценочной стоимости машины).</li>
+					<li>Бесплатная оценка ТС.</li>
+					<li>Честная профессиональная экспертиза</li>
+
+				</ul>
+			</div>
+		</div>
+		<div class="page-services-header-right">
+			<div class="page-services-header-right-inner">
+				Низкая процентная ставка <span>от 3%</span>
+			</div>
+		</div>
+	</div>
+	<div class="page-services-table">
+		<div class="page-services-table-name">Программы займа под залог ПТС</div>
+		<div class="page-services-table-content">
+			<table>
+				<tbody>
+					<tr>
+						<td>Программа</td>
+						<td>Срок займа</td>
+						<td>Валюта</td>
+						<td>Ставка</td>
+					</tr>
+					{% for item in 0..3 %}
+					<tr>
+						<td>Залог ПТС автомобиля</td>
+						<td>до 5 лет</td>
+						<td>RUB</td>
+						<td>от 3%</td>
+					</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<div class="our-advantages">
+		<div class="our-advantages-content">
+			<div class="our-advantages-title">Преимущества займа<br>в <span class="company">Mos</span><span class="company _blue">Zaim</span><span class="company">24</span></div>
+			<div class="our-advantages-list">
+				<ul>
+					<li>Выгодное предложение</li>
+					<li>Быстрое оформление</li>
+					<li>Индивидуальный подход</li>
+					<li>Прозрачные условия</li>
+					<li>Безопасность</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="loan-steps">
+		<div class="loan-steps-title">Займ за 30 минут</div>
+		<div class="loan-steps-content">
+			<div class="loan-step-item">
+				<div class="loan-step-item-img"><img src="./assets/images/tr-1.svg" alt=""></div>
+				<div class="loan-step-item-name">4 минут</div>
+				<div class="loan-step-item-text">Заполните заявку на сайте</div>
+			</div>
+			<img src="./assets/images/tr-arrow.svg" alt="" class="loan-arrow">
+			<div class="loan-step-item">
+				<div class="loan-step-item-img"><img src="./assets/images/tr-2.svg" alt=""></div>
+				<div class="loan-step-item-name">26 минут</div>
+				<div class="loan-step-item-text">Дождитесь одобрения</div>
+			</div>
+			<img src="./assets/images/tr-arrow.svg" alt="" class="loan-arrow">
+			<div class="loan-step-item">
+				<div class="loan-step-item-img"><img src="./assets/images/tr-3.svg" alt=""></div>
+				<div class="loan-step-item-name">Получите деньги</div>
+				<div class="loan-step-item-text">В отделении или воспользуйтесь доставкой</div>
+			</div>
+		</div>
+		<a class="loan-link" href="">Заполните заявку</a>
+	</div>
+	<div class="answer-questions">
+		<div class="aq-title">Часто задаваемые вопросы</div>
+		<div class="answer-questions-content">
+			{% for item in 0..3 %}
+			<div class="aq-item">
+				<div class="question-item">
+					Как я могу оплатить займ <img src="./assets/images/down-arrow.svg" alt="">
+				</div>
+				<div class="answer-item">
+					<b>Займ наличными:</b>
+					<p>1) Без комиссии:</p> 
+					<ul>
+						<li>Офис компании</li>
+						<li>Почта России</li>
+					</ul>
+					<p>2) С комиссией:</p>
+					<ul>
+						<li>Офис компании</li>
+						<li>Почта России</li>
+					</ul>
+					<b>Займ на Быстрокарту и Личную карту:</b>
+					<p>1) Без комиссии:</p>
+					<ul>
+						<li>Офис компании</li>
+						<li>Почта России</li>
+					</ul>
+					<p>2) С комиссией:</p>
+					<ul>
+						<li>Офис компании</li>
+						<li>Почта России</li>
+					</ul>
+					<p>
+						Уважаемые Клиенты, с 01.02.2020 в связи с техническим ограничением системы недоступна оплата через кассу офиса займов, зачисленных на карту и оформленных на Личную карту в мобильном приложении и личном кабинете. Размер комиссии в каждом канале оплаты вы можете уточнить по телефону гор.линии:8-800-800-88-88
+					</p>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+</main>
+{% include "partials/footer.twig" %}
