@@ -23,8 +23,291 @@ body {
 img {
     max-width: 100%;
 }
+/* modals */
+.alModal {
+    width: 96%;
+    max-width: 400px;
+    height: auto;
+    display: none;
+    position: fixed;
+    z-index: 999999;
+    opacity: 0;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0;
+}
+.alModal.modal--show{
+    display: block;
+    opacity: 1;
+    -webkit-animation: showModal 250ms ease-in-out;
+    animation: showModal 250ms ease-in-out;
+}
+@-webkit-keyframes showModal {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes showModal {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+span.alModalClose:before {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: #fff;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: 42%;
+}
+.alModalClose {
+    cursor: pointer;
+    width: 35px;
+    display: block;
+    text-align: center;
+    float: right;
+    position: absolute;
+    bottom: calc(100% + 5px);
+    right: -35px;
+    z-index: 101;
+    color: #ffffff;
+    font-size: 12px;
+    height: 35px;
+    line-height: 26px;
+    font-family: sans-serif;
+}
+span.alModalClose:after {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: #fff;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top: 42%;
+    left: 0%;
+}
+.alModalClose:hover {
+    color: #ffffff;
+}
+.alModal p {
+    position: relative;
+    display: block;
+    color: #000;
+    margin-bottom: 25px;
+    line-height: 1;
+    font-weight: 500;
+    font-size: 24px;
+    text-align: center;
+}
+.alModal span{
+    display: block;
+    font-size: 10px;
+    font-weight: 500;
+    color: #000;
+    transition: 0.2s ease;
+}
+.alModal label{
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    display: block;
+}
+.alModalThank {
+    max-width: 500px;
+}
+.alModal .thank_ico {
+    color: #42AD41;
+    padding: 10px 10px 0;
+    font-size: 50px;
+    display: inline-block;
+    line-height: 1;
+    border-radius: 50%;
+    width: 65px;
+    text-align: center;
+    height: 65px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+.alModal .thank_words {
+    display: inline-block;
+    color: #333;
+    padding-left: 15px;
+    line-height: 1.4;
+    font-size: 17px;
+    width: 73%;
+    vertical-align: middle;
+}
+#overlay {
+    z-index: 99999;
+    position: fixed;
+    background-color: rgba(0,0,0,0.8);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    display: none;
+}
+#overlay.overlay--show{
+    display: block;
+    -webkit-animation: showModal 250ms ease-in-out;
+    animation: showModal 250ms ease-in-out;
+}
+.alModalContent {
+    padding: 25px 40px 35px;
+    background: #fff;
+}
+.alModalContent .alModalInput {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    padding: 12px;
+    height: auto;
+    width: 100%;
+    line-height: 1;
+    border-radius: 0px;
+    border: 3px solid #c4c4c4;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 15px;
+    color: #333;
+}
+.alModal .file-download{
+    margin-bottom: 15px;
+}
+.alModal .file-download:last-child{
+    margin-bottom: 0;
+}
+.alModal .file-download a{
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    padding: 12px;
+    border: 3px solid #c4c4c4;
+    transition: 0.2s ease;
+}
+.alModal .file-download a:hover{
+    color: #50e20b;
+    border-color: #50e20b;
+}
+.alModal .alModalButton {
+    position: relative;
+    margin: 0 auto;
+    line-height: 1.4;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    background: #e10000;
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid #4ce00e;
+    border-radius: 2px;
+    background-image: -moz-linear-gradient( 0deg, rgb(10,205,75) 0%, rgb(81,226,10) 100%);
+    background-image: -webkit-linear-gradient( 0deg, rgb(10,205,75) 0%, rgb(81,226,10) 100%);
+    background-image: -ms-linear-gradient( 0deg, rgb(10,205,75) 0%, rgb(81,226,10) 100%);
+    padding: 15px 13px;
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+    background-size: 320px;
+    background-repeat: no-repeat;
+    background-position: 0;
+    transition: 0.3s ease;
+}
+.alModal .alModalButton:hover {background-position: -320px;color: #0ccd49;}
+.alModalButton.disabled{
+    pointer-events: none;
+}
+.alModalQuickCons{
+    text-align: center;
+    background-color: #dae0f9;
+    padding: 22px 40px;
+}
+.alModalQuickCons p{
+    margin-bottom: 2px;
+    font-size: 14px;
+}
+.alModalQuickCons a{
+    display: block;
+    font-size: 32px;
+    font-weight: 300;
+    color: #000;
+    text-decoration: none;
+}
+.popup_title_wrp {
+    padding: 15px 20px;
+    color: #ffffff;
+    font-size: 16px;
+    background-color: #00AEEF;
+}
+.alModal.city_popup_wrp {
+    width: calc(100% - 40px);
+    max-width: 860px;
+}
+.cities_list_wrp {
+    max-height: 378px;
+    overflow-y: auto;
+    padding: 10px 20px;
+}
+.cities_list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+}
+.cities_list .city_name_wrp {
+    min-height: 40px;
+    padding: 2px 10px;
+    font-size: 0px;
+    line-height: 36px;
+    text-align: left;
+    cursor: pointer;
+    color: #000!important;
+    transition: 0.2s ease;
+}
+ul.cities_list li:hover .city_name_wrp {
+    background-color: #FF9703;
+    
+}
+ul.cities_list li:hover .city_name_wrp span{
+    color: #fff;
+}
+.cities_list .city_name_wrp .text {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 18px;
+    vertical-align: middle;
+}
+/* modals */
+.slick-dotted.slick-slider {
+    margin-bottom: 0;
+}
 .slick-dots {
-    bottom: 10px;
+    bottom: 15px;
 }
 .slick-dots li {
     height: 14px;
@@ -51,9 +334,10 @@ li.slick-active button {
 	margin: 0 auto;
 	padding: 0 15px;
 }
-.main-slick{
+.main-slick.slick-dotted.slick-slider{
 	margin-bottom: 30px;
 }
+
 .main-slick-content{}
 .main-slick-content a{}
 .main-slick-content a img{}
@@ -388,6 +672,7 @@ p.form-output__rate.summ-rate {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
 }
 .manager-callback {
     background-image: url(../images/man.png);
@@ -421,11 +706,7 @@ display: flex;
 justify-content: center;align-items: center;
 text-decoration: none;
 }
-.main-page_how-work {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
+
 .form-summ-content {
     width: 350px;
     display: flex;
@@ -476,11 +757,17 @@ margin-bottom: 18px;
 	align-items: center;
 	border: 1px solid #fff;
 }
+.main-page_how-work {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
 .how-work-content{
 	border: 1px solid #F8F5F5;
 box-shadow: 0px 0px 15px rgba(201, 201, 201, 0.26);
 border-radius: 3px;
-background-image: url(../images/how-work.png);
+background-image: url(../images/how-work.jpg);
 background-repeat: no-repeat;
 background-position: 100% 100%;
 padding: 20px 35px 30px;
@@ -501,28 +788,107 @@ color: #333333;
     line-height: 22px;
     color: #333333;
 }
-.company-name{}
-.company-name._blue{}
-.news-block{}
-.news-block-content{}
-.news-block-header{}
-.news-block-title{}
-.all-news-link{}
-.all-news-link a{}
-.news-block-inner{}
-.news-item{}
-.news-item-date{}
-.news-item-name{}
-.news-block-slider{}
+
+.news-block {
+    margin-bottom: 75px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.news-block-content {
+    border: 1px solid #ECECEC;
+    border-radius: 3px;
+    padding: 33px 30px 5px;
+    width: calc(100% - 410px);
+}
+.news-block-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 10px;
+}
+.news-block-title {
+    font-size: 36px;
+    line-height: 44px;
+    color: #333333;
+}
+.all-news-link {
+    margin-bottom: 7px;
+}
+.all-news-link a {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    text-decoration-line: underline;
+    color: #00AEEF;
+}
+a.main-news-item {
+    display: block;
+    text-decoration: none;
+    border-bottom: 1px solid #ECECEC;
+    padding: 10px 0 20px;
+}
+a.main-news-item:last-child {
+    border-bottom: none;
+}
+.main-news-item-date {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #ECECEC;
+    margin-bottom: 5px;
+}
+.main-news-item-name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #333333;
+    border-bottom: 1px solid transparent;
+}
+.news-block-slider{
+    width: 380px;
+}
 .news-block-slick{}
 .news-block-slick-content{}
 .news-block-slick-content img{}
-.main-page-seo{}
-.main-page-seo-title{}
-.main-page-seo-title .company-name{}
-.main-page-seo-text{}
-.main-page-seo-text p{}
-.main-page-seo .show-more{}
+.main-page-seo{
+    padding: 25px 35px;
+    border: 1px solid #ECECEC;
+    border-radius: 3px;
+    margin-bottom: 50px;
+}
+.main-page-seo-title {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 44px;
+    color: #333333;
+    margin: 0 0 30px 0;
+}
+
+.main-page-seo-text p {
+    font-size: 18px;
+    line-height: 22px;
+    color: #333333;
+    margin: 0 0 20px;
+}
+.main-page-seo-text p:not(:first-child){
+    display: none;
+}
+.show-more-seo {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #333333;
+    width: 135px;
+    margin: 40px auto 0;
+    padding-bottom: 15px;
+    background-image: url(../images/down-arrow_m.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+    cursor: pointer;
+    user-select: none;
+}
 .page-services-header {
     display: flex;
     flex-wrap: wrap;
