@@ -63,30 +63,36 @@
      			<a href="" class="main-header-calculation">Расчет займа %</a>
      		</div>
      	</div>
-    </header><main class='main-content' id="app">
+    </header>
+<main class='main-content' id="app">
 <div class="container">
 	<div class="main-slick">
-				<div class="main-slick-content">
+		
+		<div class="main-slick-content">
 			<a href="">
 				<img src="./assets/images/slide.jpg" alt="">
 			</a>
 		</div>
-				<div class="main-slick-content">
+		
+		<div class="main-slick-content">
 			<a href="">
 				<img src="./assets/images/slide.jpg" alt="">
 			</a>
 		</div>
-				<div class="main-slick-content">
+		
+		<div class="main-slick-content">
 			<a href="">
 				<img src="./assets/images/slide.jpg" alt="">
 			</a>
 		</div>
-				<div class="main-slick-content">
+		
+		<div class="main-slick-content">
 			<a href="">
 				<img src="./assets/images/slide.jpg" alt="">
 			</a>
 		</div>
-			</div>
+		
+	</div>
 	<div class="main-page-triggers">
 		<div class="trigger-item">
 			<div class="trigger-info">
@@ -141,33 +147,35 @@
             <p class="calculator__desc">Рассчитайте ежемесячный платеж и сумму к выплате</p>
             <form id="form-calculator" name="summ" action="#" method="POST" class="calculator__form form-calculator">
                 <label class="form-calculator__label"><span>Сумма кредита, ₽</span>
-                    <input id="calc_sum" type="text" value="300 000 ₽" name="calc_sum" class="form-calculator__input form-calculator__input--summ-loan" placeholder="">
+                    <input id="calc_sum" type="text" value="199080 ₽" name="calc_sum" class="form-calculator__input form-calculator__input--summ-loan" placeholder="">
                     <div id="calc_sum_range" class="calc-range clc-r"></div>
                     <p class="form-calculator__price under-input-wrapper"><span class="form-calculator__from">от 30 000</span><span class="form-calculator__to under-input-2">до 15 000 000</span></p>
                 </label>
                 <label class="form-calculator__label"><span>Срок кредита(мес)</span>
                     <input id="calc_term" type="text" name="calc_term" value="12 месяц" placeholder="" class="form-calculator__input form-calculator__input--summ-loan">
                     <input id="calc_term_range" type="range" min="0" max="36" step="1" value="12" name="calc_term_range" class="calc-range" placeholder="">
-                    <p class="form-calculator__price under-input-wrapper"><span class="form-calculator__from">1</span><span class="form-calculator__to under-input-2">60</span></p>
+                    <p class="form-calculator__price under-input-wrapper"><span class="form-calculator__from">1</span><span class="form-calculator__to under-input-2">36</span></p>
                 </label>
                 <label class="form-calculator__label"><span>Ежемесячный платеж</span>
                     <input id="calc_payment" type="text" name="calc_payment" value="264 355 ₽" class="form-calculator__input form-calculator__input--summ-loan" placeholder="">
-                    <input id="calc_payment_range" type="range" min="NaN" max="1167382" step="1" value="20697" name="calc_payment_range" class="calc-range clc-r" placeholder="">
+                    <input id="calc_payment_range" type="range" min="" max="1167382" step="1" value="20000" name="calc_payment_range" class="calc-range clc-r" placeholder="">
                 </label>
                 <div class="form-calculator__output form-output">
             <div class="form-output__content">
-                <div class="form-output__summ-percent summ-percent"><span class="summ-percent__desc" style="top: 0px; left: 0px;">Сумма процентов</span>
-                    <input id="calc_overpayment" type="text" name="calc_overpayment" readonly="" class="summ-percent__output" placeholder="">
-                    <p class="form-output__rate summ-rate">
-		                <input id="calc_rate_range" type="hidden" value="2" name="calc_rate_range" class="calc-range" placeholder=""><span class="summ-rate__desc" style="top: 0px; left: 0px;">Ваша ставка:</span><span class="summ-rate__output form-stv" style="top: 0px; left: 0px;">2</span><span style="top: 0px; left: 0px;">% в месяц</span>
-		            </p>
-                </div>
-                <div class="form-output__summ-result summ-result"><span class="summ-result__desc" style="top: 0px; left: 0px;">Сумма к выплате</span>
+            	<div class="percent-summ-rate">
+	                <p class="form-output__summ-percent summ-percent"><span class="summ-percent__desc" style="top: 0px; left: 0px;">Сумма процентов</span>
+	                    <input id="calc_overpayment" type="text" name="calc_overpayment" readonly="" class="summ-percent__output" placeholder="">
+	                </p>
+	                <p class="form-output__rate summ-rate">
+	                <input id="calc_rate_range" type="hidden" value="3" name="calc_rate_range" class="calc-range" placeholder=""><span class="summ-rate__desc" style="top: 0px; left: 0px;">Ваша ставка:</span><span class="summ-rate__output form-stv" style="top: 0px; left: 0px;">3</span><span style="top: 0px; left: 0px;">% в месяц</span>
+	            	</p>
+            	</div>
+            	<div class="form-output__summ-result summ-result"><span class="summ-result__desc" style="top: 0px; left: 0px;">Сумма к выплате</span>
                     <input id="calc_payments_sum" type="text" name="calc_payments_sum" readonly="" class="summ-result__output" placeholder="">
                     <a href="" class="form-output__approval">Оставить заявку</a>
                 </div>
             </div>
-            
+
             
         </div>
             </form>
@@ -216,35 +224,44 @@
 			<div class="all-news-link"><a href="/moszaim/archive.html">Все новости</a></div>
 		</div>
 		<div class="news-block-inner">
-						<a href="/moszaim/single-news.html" class="main-news-item">
+			
+			<a href="/moszaim/single-news.html" class="main-news-item">
 				<div class="main-news-item-date">20.05.2020</div>
 				<div class="main-news-item-name">Мутко: Россияне подали больше 120 тысяч заявок в банки на оформление льготной ипотеки</div>
 			</a>
-						<a href="/moszaim/single-news.html" class="main-news-item">
+			
+			<a href="/moszaim/single-news.html" class="main-news-item">
 				<div class="main-news-item-date">20.05.2020</div>
 				<div class="main-news-item-name">Мутко: Россияне подали больше 120 тысяч заявок в банки на оформление льготной ипотеки</div>
 			</a>
-						<a href="/moszaim/single-news.html" class="main-news-item">
+			
+			<a href="/moszaim/single-news.html" class="main-news-item">
 				<div class="main-news-item-date">20.05.2020</div>
 				<div class="main-news-item-name">Мутко: Россияне подали больше 120 тысяч заявок в банки на оформление льготной ипотеки</div>
 			</a>
-					</div>
+			
+		</div>
 	</div>
 	<div class="news-block-slider">
 		<div class="news-block-slick">
-						<div class="news-block-slick-content">
+			
+			<div class="news-block-slick-content">
 				<img src="./assets/images/news-block.jpg" alt="">
 			</div>
-						<div class="news-block-slick-content">
+			
+			<div class="news-block-slick-content">
 				<img src="./assets/images/news-block.jpg" alt="">
 			</div>
-						<div class="news-block-slick-content">
+			
+			<div class="news-block-slick-content">
 				<img src="./assets/images/news-block.jpg" alt="">
 			</div>
-						<div class="news-block-slick-content">
+			
+			<div class="news-block-slick-content">
 				<img src="./assets/images/news-block.jpg" alt="">
 			</div>
-					</div>
+			
+		</div>
 	</div>
 </div>
 <div class="main-page-seo">

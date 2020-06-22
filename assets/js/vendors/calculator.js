@@ -31,10 +31,10 @@ function isValidPhone(phone) {
 
 
     noUiSlider.create(document.getElementById('calc_sum_range'), {
-      start: 300000,
+      start: 199080,
       connect: 'lower',
       range: {
-        'min': [30000, 10000],
+        'min': [30000, 10],
         '50%': [1000000, 100000],
         'max': maxsum*1000000
       }
@@ -351,23 +351,23 @@ function getStv(flag){
   var mths =parseFloat($('#calc_term_range').val());
   if(flag){
     if(mths<13){
-      stv = 3.3;
+      stv = 3;
     }else if(mths>=13 && mths<24){
-      stv = 2.5;
+      stv = 3;
     }else if(mths>=24  ){
-      stv = 2;
+      stv = 3;
     }
   }
 
 
   if(summa<100000){
-    stv2 = 3.3;
+    stv2 = 3;
   }else if(summa>=100000 && summa<500000){
     stv2 = 3;
   }else if(summa>=500000 && summa<1000000){
-    stv2 = 2.5;
+    stv2 = 3;
   }else if(summa>=1000000){
-    stv2 = 2;
+    stv2 = 3;
   }
 
   if(stv>stv2){
@@ -513,13 +513,13 @@ $(document).ready(function() {
 
     var stv2= 0;
     if(summa<100000){
-      stv2 = 3.3;
+      stv2 = 3;
     }else if(summa>=100000 && summa<500000){
       stv2 = 3;
     }else if(summa>=500000 && summa<1000000){
-      stv2 = 2.5;
+      stv2 = 3;
     }else if(summa>=1000000   ){
-      stv2 = 2;
+      stv2 = 3;
     }
 
     $('#calc_rate_range').val(stv2);
@@ -537,13 +537,13 @@ $(document).ready(function() {
 
     var stv2= 0;
     if(summa<100000){
-      stv2 = 3.3;
+      stv2 = 3;
     }else if(summa>=100000 && summa<500000){
       stv2 = 3;
     }else if(summa>=500000 && summa<1000000){
-      stv2 = 2.5;
+      stv2 = 3;
     }else if(summa>=1000000   ){
-      stv2 = 2;
+      stv2 = 3;
     }
 
     $('#calc_rate_range').val(stv2);

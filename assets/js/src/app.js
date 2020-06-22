@@ -1,8 +1,14 @@
 $(document).ready(function() {
-$('.show-more-seo').click(function(){
-$(this).toggleClass('rotate');
-$('.main-page-seo-text p:not(:first-child)').slideToggle();
-});
+
+$('.show-more-seo').click(function(e) {
+        $('.main-page-seo-text p:not(:first-child)').slideToggle();
+        $(this).toggleClass('rotate');
+        $(this).text(function(i, text) {
+            return text === "Узнать больше" ? "Скрыть" : "Узнать больше";
+        })
+    });
+
+
 $('.question-item').click(function(){
 $(this).toggleClass('rotate');
 $(this).parent().find('.answer-item').slideToggle();
@@ -102,7 +108,7 @@ function deleteCookie(name) {
   calcTermRange.style.background = colorcalcTermRange;
 
   var gradVal = Math.round((calcPaymentRange.value/calcPaymentRange.getAttribute('max')*1)*100);
-  var colorcalcTermRange = 'linear-gradient(90deg, rgb(0, 174, 239) ' + gradValue + '%, rgb(225, 225, 225) ' + gradValue + '%)';
+  var colorcalcTermRange = 'linear-gradient(90deg, rgb(0, 174, 239) 2%, rgb(225, 225, 225) 2%)';
   calcPaymentRange.style.background = colorcalcTermRange;
 
   calcTermRange.addEventListener('touchmove', function(evt) {
