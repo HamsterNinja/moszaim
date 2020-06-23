@@ -31,7 +31,7 @@ function isValidPhone(phone) {
 
 
     noUiSlider.create(document.getElementById('calc_sum_range'), {
-      start: 199080,
+      start: 200000,
       connect: 'lower',
       range: {
         'min': [30000, 10],
@@ -351,23 +351,23 @@ function getStv(flag){
   var mths =parseFloat($('#calc_term_range').val());
   if(flag){
     if(mths<13){
-      stv = 3;
+      stv = 2;
     }else if(mths>=13 && mths<24){
-      stv = 3;
+      stv = 2;
     }else if(mths>=24  ){
-      stv = 3;
+      stv = 2;
     }
   }
 
 
   if(summa<100000){
-    stv2 = 3;
+    stv2 = 2;
   }else if(summa>=100000 && summa<500000){
-    stv2 = 3;
+    stv2 = 2;
   }else if(summa>=500000 && summa<1000000){
-    stv2 = 3;
+    stv2 = 2;
   }else if(summa>=1000000){
-    stv2 = 3;
+    stv2 = 2;
   }
 
   if(stv>stv2){
@@ -513,13 +513,13 @@ $(document).ready(function() {
 
     var stv2= 0;
     if(summa<100000){
-      stv2 = 3;
+      stv2 = 2;
     }else if(summa>=100000 && summa<500000){
-      stv2 = 3;
+      stv2 = 2;
     }else if(summa>=500000 && summa<1000000){
-      stv2 = 3;
+      stv2 = 2;
     }else if(summa>=1000000   ){
-      stv2 = 3;
+      stv2 = 2;
     }
 
     $('#calc_rate_range').val(stv2);
@@ -537,13 +537,13 @@ $(document).ready(function() {
 
     var stv2= 0;
     if(summa<100000){
-      stv2 = 3;
+      stv2 = 2;
     }else if(summa>=100000 && summa<500000){
-      stv2 = 3;
+      stv2 = 2;
     }else if(summa>=500000 && summa<1000000){
-      stv2 = 3;
+      stv2 = 2;
     }else if(summa>=1000000   ){
-      stv2 = 3;
+      stv2 = 2;
     }
 
     $('#calc_rate_range').val(stv2);

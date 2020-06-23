@@ -1,5 +1,7 @@
 $(document).ready(function() {
-
+$('.btn-hamburger').click(function () {
+    $('.main-header-menu').slideToggle();
+});
 $('.show-more-seo').click(function(e) {
         $('.main-page-seo-text p:not(:first-child)').slideToggle();
         $(this).toggleClass('rotate');
