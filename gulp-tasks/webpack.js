@@ -3,7 +3,7 @@ import webpack from 'webpack'
 import process from 'process'
 import WriteFilePlugin from 'write-file-webpack-plugin'
 
-const isProduction = process.env.NODE_ENV === 'production'
+const isProduction = process.env.NODE_ENV === 'development'
 
 let config = {
   // I would recommend using different config variables
@@ -46,7 +46,7 @@ let config = {
         query: {
           presets: [
             [
-              'latest',
+              '@babel/preset-env',
               {
                 modules: false,
               },
@@ -68,7 +68,7 @@ let config = {
   plugins: isProduction
     ? [
         new webpack.DefinePlugin({
-          'process.env.NODE_ENV': '"production"',
+          'process.env.NODE_ENV': '"development"',
         }),
         new webpack.optimize.UglifyJsPlugin(),
         new WriteFilePlugin({

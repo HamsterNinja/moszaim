@@ -36,6 +36,7 @@
   "keywords": [],
   "dependencies": {
     "babel-loader": "^8.1.0",
+    "babel-polyfill": "^6.26.0",
     "babel-preset-latest": "^6.24.1"
   }
 }

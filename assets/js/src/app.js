@@ -1,3 +1,95 @@
+import 'babel-polyfill';
+import Vue from 'vue';
+
+var quiz = {
+      user: "",
+      questions: [
+         {
+            text: "Когда вам нужны деньги?",
+            responses: [
+               { text: "В течение часа" },
+               { text: "Сегодня" },
+               { text: "Завтра" },
+               { text: "В течение недели" }
+            ]
+         },
+         {
+            text: "На какой срок вам нужны деньги?",
+            responses: [
+               { text: "1-3 месяца" },
+               { text: "3-6 месяцев" },
+               { text: "6-12 месяцев" },
+               { text: "Более года" }
+            ]
+         },
+         {
+            text: "Ваша кредитная история?",
+            responses: [
+               { text: "Нулевая" },
+               { text: "Без просрочек" },
+               { text: "Были просрочки" }
+            ]
+         }
+      ]
+   };
+
+var userResponseSkelaton = Array(quiz.questions.length).fill(null);
+
+var app = new Vue({
+   el: "#app",
+    delimiters: ["((", "))"],
+   data: {
+      quiz: quiz,
+      questionIndex: 0,
+      userResponses: userResponseSkelaton,
+      isActive: false
+   },
+   filters: {
+      charIndex: function(i) {
+         return String.fromCharCode(97 + i);
+      }
+   },
+   methods: {
+         restart: function(){
+                this.questionIndex=0;
+                this.userResponses=Array(this.quiz.questions.length).fill(null);
+         },
+      selectOption: function(index) {
+         Vue.set(this.userResponses, this.questionIndex, index);
+         this.next()
+         //console.log(this.userResponses);
+      },
+      next: function() {
+         if (this.questionIndex < this.quiz.questions.length){
+
+            this.questionIndex++;
+         }
+      },
+
+      prev: function() {
+         if (this.quiz.questions.length > 0) this.questionIndex--;
+      },
+      // Return "true" count in userResponses
+      score: function() {
+         var score = 0;
+         for (let i = 0; i < this.userResponses.length; i++) {
+            if (
+               typeof this.quiz.questions[i].responses[
+                  this.userResponses[i]
+               ] !== "undefined" &&
+               this.quiz.questions[i].responses[this.userResponses[i]].correct
+            ) {
+               score = score + 1;
+            }
+         }
+         return score;
+
+         //return this.userResponses.filter(function(val) { return val }).length;
+      }
+   }
+});
+
+
 $(document).ready(function() {
 $('.btn-hamburger').click(function () {
     $('.main-header-menu').slideToggle();
