@@ -49,6 +49,22 @@ var app = new Vue({
          return String.fromCharCode(97 + i);
       }
    },
+    computed: {
+        percent: function(){
+        if (this.questionIndex = 0){
+            return 1
+        };
+        if (this.questionIndex = 1){
+            return 50
+        };
+        if (this.questionIndex = 2){
+            return 75
+        };
+        if (questionIndex >= quiz.questions.length){
+            return 99
+        }
+      },
+    }, 
    methods: {
          restart: function(){
                 this.questionIndex=0;
@@ -65,6 +81,7 @@ var app = new Vue({
             this.questionIndex++;
          }
       },
+      
 
       prev: function() {
          if (this.quiz.questions.length > 0) this.questionIndex--;

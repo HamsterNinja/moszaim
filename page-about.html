@@ -1015,15 +1015,16 @@
                 <!-- transition -->
                 <transition :duration="{ enter: 500, leave: 300 }" enter-active-class="animated zoomIn" leave-active-class="animated zoomOut" mode="out-in">
                     <!--qusetionContainer-->
-                    <div class="questionContainer" v-if="questionIndex<quiz.questions.length" v-bind:key="questionIndex">
+                    <div class="questionContainer">
                         <form action="javascript:void(0);" id="alxModalForm3">
                             <div class="quiz-title">Хотите получить <span class="summ-quiz">300 000 ₽</span><input readonly="" type="hidden" value=""></div>
                             <div class="quiz-left">
-                                <div class="quiz-text">Ответьте на несколько вопросов и получите одобрение по займу</div>
-                                <div class="statusbar" :value="(questionIndex/quiz.questions.length)*100" max="99" style="background: repeating-linear-gradient(90deg,#FF9E14, #FF9E14 3px, #FF9703 3px, #FF9703 6px);">
-                                    <img src="./assets/images/statusbar.svg" alt="">
-                                    <span class="statusbar-percent">Вероятность одобрения (((questionIndex/quiz.questions.length)*100))%</span>
+                                   <div class="quiz-text">Ответьте на несколько вопросов и получите одобрение по займу</div>
+                                <div class="statusbar" :value="percent" max="99" style="background: repeating-linear-gradient(90deg,#FF9E14, #FF9E14 3px, #FF9703 3px, #FF9703 6px);">
+                                    <span class="statusbar-percent">Вероятность одобрения (( percent ))%</span>
                                 </div>
+                            <div v-if="questionIndex<quiz.questions.length" v-bind:key="questionIndex">
+                                
                                 <div class="quiz-content">
                                     <div class="quiz-content-quest">(( quiz.questions[questionIndex].text ))</div>
                                     <div class="quiz-content-answer">
@@ -1035,6 +1036,8 @@
                                 <nav class="pagination" role="navigation" aria-label="pagination">
                                     <a class="button" v-on:click="prev();" :disabled="questionIndex < 1">Вернуться</a>
                                 </nav>
+
+                                   </div>
                                 <!--quizCompletedResult-->
                                    <div v-if="questionIndex >= quiz.questions.length" v-bind:key="questionIndex" class="quizCompleted has-text-centered">
 
@@ -1068,7 +1071,7 @@
                     </form>
             </div>
             <!--/questionContainer-->
-            
+
             </transition>
         </div>
         <!--/questionBox-->

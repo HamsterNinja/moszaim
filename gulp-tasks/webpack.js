@@ -3,7 +3,7 @@ import webpack from 'webpack'
 import process from 'process'
 import WriteFilePlugin from 'write-file-webpack-plugin'
 
-const isProduction = process.env.NODE_ENV === 'development'
+const isProduction = false
 
 let config = {
   // I would recommend using different config variables
@@ -70,7 +70,7 @@ let config = {
         new webpack.DefinePlugin({
           'process.env.NODE_ENV': '"development"',
         }),
-        new webpack.optimize.UglifyJsPlugin(),
+        // new webpack.optimize.UglifyJsPlugin(),
         new WriteFilePlugin({
           test: /^(?!.*(hot)).*/,
         }),
